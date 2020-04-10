@@ -67,7 +67,7 @@ void Window::clipboardChanged()
 
 void Window::setClipboard()
 {
-    QApplication::clipboard()->setText(COPYPASTA);
+    QApplication::clipboard()->setText(copypasta);
 }
 
 #endif

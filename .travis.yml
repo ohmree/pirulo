@@ -5,7 +5,7 @@ language: cpp
 addons:
   apt:
     packages:
-      - ninja
+      - ninja-build
       - qt5-default 
       - qttools5-dev-tools
 

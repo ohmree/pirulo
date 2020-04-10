@@ -17,7 +17,7 @@ add_executable(pirulo
   main.cpp
   window.cpp
   window.h
-  pasta.qrc
+  pirulo.qrc
 )
 
 target_link_libraries(pirulo PRIVATE Qt5::Widgets)

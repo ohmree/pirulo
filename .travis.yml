@@ -9,7 +9,7 @@ addons:
       - qttools5-dev-tools
 
 script:
-  - CXX=/usr/bin/g++-6 CC=/usr/bin/gcc-6 cmake .
+  - cmake .
   - cmake --build .
 
 deploy:

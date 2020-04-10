@@ -14,7 +14,8 @@ script:
   - cmake --build .
   - wget 'https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage'
   - mv pirulo appimage/usr/bin 
-  - ./linuxdeployqt-continuous-x86_64.AppImage -appimage appimage/usr/share/applications/Pirulo.desktop
+  - ./linuxdeployqt-continuous-x86_64.AppImage -appimage appimage/usr/share/applications/pirulo.desktop
+  - ls
 
 deploy:
   provider: releases

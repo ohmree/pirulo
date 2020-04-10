@@ -21,3 +21,6 @@ add_executable(pirulo
 )
 
 target_link_libraries(pirulo PRIVATE Qt5::Widgets)
+if (MINGW OR MSYS) 
+  target_link_options(pirulo PRIVATE -mwindows)
+endif()

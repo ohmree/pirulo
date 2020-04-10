@@ -15,6 +15,7 @@ script:
   - wget 'https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage'
   - mv pirulo appimage/usr/bin 
   - ./linuxdeployqt-continuous-x86_64.AppImage -appimage appimage/usr/share/applications/pirulo.desktop
+  - chmod a+x ./linuxdeployqt-continuous-x86_64.AppImage
   - ls
 
 deploy:

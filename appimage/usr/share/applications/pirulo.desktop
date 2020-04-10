@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Pirulo
+Comment=My nam jef
+Exec=pirulo
+Icon=pirulo
+Categories=TrayIcon;Education;Utility

@@ -12,12 +12,15 @@ addons:
 script:
   - cmake . -G Ninja -DCMAKE_BUILD_TYPE=Release
   - cmake --build .
+  - wget 'https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage'
+  - mv pirulo appimage/usr/bin 
+  - ./linuxdeployqt-continuous-x86_64.AppImage -appimage appimage/usr/share/applications/Pirulo.desktop
 
 deploy:
   provider: releases
   api_key:
     secure: iPWzUeJI1dPHf5L/miNQihvyW/kfs/6x/eLx18tQx3roeyrhACBc2Wgo5Q5MtPA0zDJiqC47rxwrwmSHJ3yl8l3opMk9UVyvh7kjNx1qotc3DNPMz+emM4PirdIGRewvssUSznD8/5ojPBYj/fj3rX37qMreIH41HFBdzq5lW/v8u1rn8C+Xu6b8bGovBU4N6R7jK2Kzt/lRGdaOqDnXt6TuzzYMRX2vDIqIMCA3kVFahSH1wjpGjwN/HQ+XE4fMCXAyvqw1oMuKqRXZqJ2kHSXkOQWsEiZeIKq6k74uoPEmelituKSUzwksn/BhYgZbkXhdUkhnbPPH/jj8w86ZkIMkorvJHT7wKpv1SH1Hv6HlWaeGBca6yvErQ3isN776BmxM/MLRbxhppfUrndpfDut10cUpnBlafSbKeM56f8/nlUXsAkNfGYazmTdE+wCVKGGS/uqilk0Vn3d5GvZtJq/cNdQALA1BDKXL4vwkw48ZlED+yjanQQrS2E8sRiB+FQjSx47Ety8O945Ar8A8rOgiWkConXUuiLL7QQZaZYl1BXQ6abIOa78vsFb9t6GMAecaCqK+AfZWamMJZ/zzGRK4jgNiyMl66kQ8UEx0Gqw8FtuoYvf489+EDNRAysMwzAiIx7bDGRLaCGSm9f73J2f5Mw28uiMeUZGc9P2+dS0=
-  file: pirulo
+  file: Pirulo.AppImage
   skip_cleanup: true
   on:
     repo: omrisim210/pirulo

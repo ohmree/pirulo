@@ -4,11 +4,7 @@ language: cpp
 
 addons:
   apt:
-    sources:
-      - ubuntu-toolchain-r-test
-      - sourceline: 'ppa:ubuntu-sdk-team/ppa'
     packages:
-      - g++-6 
       - qt5-default 
       - qttools5-dev-tools
 
